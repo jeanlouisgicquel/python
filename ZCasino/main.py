@@ -31,6 +31,11 @@ def color(nb):
 
 
 def play(money):
+    '''
+    Miser et lancer la roulette
+
+    @return montant perdu ou gagné
+    '''
     print('Vous disposez de', money, '€')
     mise = ask_mise(money)
     print('Votre mise est de ', mise, '€')
