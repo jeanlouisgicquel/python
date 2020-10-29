@@ -63,8 +63,11 @@ if __name__ == "__main__":
     while True:
         money += play(money)
         print('money', money, '€ restant')
-        res = input('Voulez rejouer ? (tapez oui pour continuer) ')
-        if res != 'oui':
+        if money == 0:
+            print('Vous avez perdu, vous ne pouvez plus miser')
+            break
+        res = input('Voulez rejouer ? (tapez "n" pour arreter) ')
+        if res == 'n' or res == 'non':
             break
     print("Merci d'avoir joué")
     print("Vous avez terminé la partie, il vous reste", money, '€')
